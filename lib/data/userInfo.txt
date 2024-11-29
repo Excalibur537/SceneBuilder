@@ -1,5 +1,4 @@
-Name: Ben, PIN: 123456, UserID: admin, Balance: 10000.0, TransactionHistory: [[, - Withdrawn: 123.0, + Deposit: 1234.0, - Withdrawn: 123.0]]
+Name: 123123, PIN: 123123, UserID: 123, Balance: 1354.0, TransactionHistory: [+ Deposit = 123.0, + Deposit = 1231.0]
 
-Name: hi, PIN: 123456, UserID: test, Balance: 2165.0, TransactionHistory: [[, - Withdrawn: 123.0, + Deposit: 1234.0]]]
-
+Name: 123123, PIN: 123123, UserID: 123123, Balance: 109368.0, TransactionHistory: [+ Deposit = 123123.0, - Withdrawn = 123.0, - Withdrawn = 12311.0, - Withdrawn = 1321.0]
 

@@ -186,7 +186,7 @@
       </Pane>
       <Pane fx:id="enteredPane" layoutX="-1.0" layoutY="222.0" prefHeight="198.0" prefWidth="599.0">
          <children>
-            <Pane fx:id="transactionPane" prefHeight="197.0" prefWidth="599.0" visible="false">
+            <Pane fx:id="transactionPane" prefHeight="197.0" prefWidth="599.0">
                <children>
                   <Text fill="WHITE" layoutX="379.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*">
                      <font>
@@ -233,7 +233,12 @@
                         <Font name="Comic Sans MS Bold" size="20.0" />
                      </font>
                   </Button>
-                  <ScrollPane fitToWidth="true" hbarPolicy="NEVER" layoutX="7.0" layoutY="7.0" prefHeight="197.0" prefWidth="355.0" style="-fx-background: tranresparent;">
+                  <Text fx:id="nameText" fill="WHITE" layoutX="14.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="heLLO, ">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <ScrollPane fitToWidth="true" hbarPolicy="NEVER" layoutX="7.0" layoutY="40.0" prefHeight="164.0" prefWidth="355.0" style="-fx-background: tranresparent;">
                      <content>
                         <ListView fx:id="transactionHistoryListView" focusTraversable="false" prefHeight="189.0" prefWidth="353.0" style="-fx-background-color: transparent;" />
                      </content></ScrollPane>
@@ -436,7 +441,7 @@
                   </Text>
                </children>
             </Pane>
-            <Pane fx:id="changePinPane" prefHeight="197.0" prefWidth="599.0">
+            <Pane fx:id="changePinPane" prefHeight="197.0" prefWidth="599.0" visible="false">
                <children>
                   <Text fill="WHITE" layoutX="380.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*">
                      <font>
@@ -513,6 +518,75 @@
                         <Font name="Comic Sans MS Bold" size="36.0" />
                      </font>
                   </Text>
+               </children>
+            </Pane>
+            <Pane fx:id="changeNamePane" prefHeight="197.0" prefWidth="599.0" visible="false">
+               <children>
+                  <Text fill="WHITE" layoutX="380.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="36.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="380.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="36.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="62.0" fitWidth="60.0" layoutX="525.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:/C:/Users/gocep/Desktop/SceneBuilder/lib/image/temmie.gif" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="returnButtonNameChange" layoutX="396.0" layoutY="144.0" mnemonicParsing="false" onAction="#returnButtonNameChangeClick" prefHeight="42.0" prefWidth="98.0" style="-fx-background-color: transparent;" text="Return" textFill="WHITE">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="newNameInput" layoutX="400.0" layoutY="20.0" prefWidth="187.0" promptText="Input New Name" style="-fx-background-color: transparent;">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </TextField>
+                  <Text fill="WHITE" layoutX="18.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="* Yer secrET saf with me">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="18.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="* teM know ye reALLY ar &gt;_&gt;">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="18.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="* h0I!!! ye a teM!?">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="18.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="* hel :)">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="confirmButtonNameChange" layoutX="396.0" layoutY="102.0" mnemonicParsing="false" onAction="#confirmButtonNameChangeClick" prefHeight="42.0" prefWidth="106.0" style="-fx-background-color: transparent;" text="Confirm" textFill="WHITE">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </Button>
+                  <Text fill="WHITE" layoutX="380.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="36.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="380.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="36.0" />
+                     </font>
+                  </Text>
+                  <PasswordField fx:id="pinInputNameChange" layoutX="400.0" layoutY="61.0" prefHeight="42.0" prefWidth="158.0" promptText="PIN" style="-fx-background-color: transparent;">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </PasswordField>
                </children>
             </Pane>
          </children></Pane>

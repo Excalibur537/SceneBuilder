@@ -36,6 +36,9 @@ public class Controller {
     private TextField amountInputDeposit;
 
     @FXML
+    private Pane changeNamePane;
+
+    @FXML
     private TextField amountInputWithdraw;
 
     @FXML
@@ -114,6 +117,15 @@ public class Controller {
     private Button pinChangeButton;
 
     @FXML
+    private Button confirmButtonNameChange;
+
+    @FXML
+    private TextField newNameInput;
+
+    @FXML
+    private PasswordField pinInputNameChange;
+
+    @FXML
     private TextField pinInputDeposit;
 
     @FXML
@@ -167,6 +179,9 @@ public class Controller {
     @FXML
     private Pane withdrawPane;
 
+    @FXML
+    private Text nameText;
+
 
     //Register Button Data saving
     @FXML
@@ -191,7 +206,7 @@ public class Controller {
             withdrawPane.setVisible(false);
             depositPane.setVisible(false);
             balanceDisplay.setText("Balance: " + Balance);
-            System.out.println("Transaction History: " + transactionHistory);
+            updateTransactionHistory();
 
 
         } else {
@@ -291,6 +306,30 @@ public class Controller {
         depositPane.setVisible(false);
         balanceBox.setVisible(true);
         changePinPane.setVisible(false);
+        changeNamePane.setVisible(false);
+    }
+
+    @FXML
+    void returnButtonNameChangeClick(ActionEvent event) {
+        transactionPane.setVisible(false);
+        optionsPane.setVisible(true);
+        withdrawPane.setVisible(false);
+        depositPane.setVisible(false);
+        balanceBox.setVisible(true);
+        changePinPane.setVisible(false);
+        changeNamePane.setVisible(false);
+
+    }
+
+    @FXML
+    void confirmButtonNameChangeClick(ActionEvent event) {
+        if(validatePIN(pinInputNameChange.getText())){
+            EditUserData("Name", newNameInput.getText());
+        }
+        else {
+            JOptionPane.showMessageDialog(null, "Error PIN wrong", "This is your fault.", JOptionPane.INFORMATION_MESSAGE);
+        }
+
     }
 
     @FXML
@@ -301,6 +340,7 @@ public class Controller {
         depositPane.setVisible(false);
         balanceBox.setVisible(false);
         changePinPane.setVisible(true);
+        changeNamePane.setVisible(false);
         oldPinInput.getParent().requestFocus();
     }
 
@@ -331,7 +371,14 @@ public class Controller {
 
     @FXML
     void nameChangeButtonClick(ActionEvent event) {
-
+        transactionPane.setVisible(false);
+        optionsPane.setVisible(false);
+        withdrawPane.setVisible(false);
+        depositPane.setVisible(false);
+        balanceBox.setVisible(false);
+        changePinPane.setVisible(false);
+        changeNamePane.setVisible(true);
+        newNameInput.getParent().requestFocus();
     }
 
     @FXML
@@ -360,7 +407,7 @@ public class Controller {
         balanceBox.setVisible(false);
         enteredPane.setVisible(false);
         changePinPane.setVisible(false);
-        transactionHistoryListView.setStyle("-fx-background-color: transparent;");
+        transactionHistoryListView.setStyle("-fx-background-color: black;");
         transactionHistoryListView.setCellFactory(param -> new ListCell<String>() {
             @Override
             protected void updateItem(String item, boolean empty) {
@@ -368,7 +415,7 @@ public class Controller {
                 if (item != null && !empty) {
                     setText(item);
                     setFont(Font.font("Comic Sans MS", FontWeight.BOLD,20));
-                    setStyle("-fx-text-fill: #333333;");
+                    setStyle("-fx-text-fill: black;");
                 } else {
                     setText(null);
                 }
@@ -381,12 +428,11 @@ public class Controller {
 
     //Extracting Data from text file
     private static String extractField(String line, String field) {
-        String[] fields = line.split(", ");
-        for (String test : fields) {
-            String[] data = test.split(": ");
-            if (data[0].equals(field)) {
-                return data[1];
-            }
+        String regex = field + ": (\\[.*?]|[^,]+)"; //IDK what this regex does but it works
+        java.util.regex.Pattern pattern = java.util.regex.Pattern.compile(regex);
+        java.util.regex.Matcher matcher = pattern.matcher(line);
+        if (matcher.find()) {
+            return matcher.group(1).trim();
         }
         return null;
     }
@@ -413,8 +459,7 @@ public class Controller {
                 String extractedUserID = extractField(line, "UserID");
                 if (UserID.equals(extractedUserID)) {
                     String transactionHistoryHolder = transactionHistory.toString();
-                    line = line.replaceFirst("TransactionHistory: \\[.*?\\]", "TransactionHistory: [" + transactionHistoryHolder + "]");
-                    System.out.println(line);
+                    line = line.replaceFirst("TransactionHistory: \\[.*?]", "TransactionHistory: " + transactionHistoryHolder);
                 }
                 data.add(line);
             }
@@ -424,6 +469,7 @@ public class Controller {
                     writer.newLine();
                 }
             }
+            updateTransactionHistory();
         } catch (IOException e) {
             JOptionPane.showMessageDialog(null, "Error updating transaction history in the file", "File Update Error", JOptionPane.ERROR_MESSAGE);
         }
@@ -444,17 +490,20 @@ public class Controller {
                     Name = extractField(line, "Name");
                     Balance = parseDouble(extractField(line, "Balance"));
                     UserID = extractedUserID;
+                    nameText.setText("heLLO, " + Name + " thi ur histor!!!");
+                    transactionHistory.clear();
 
                     String history = extractField(line, "TransactionHistory");
+                    System.out.println(extractField(line, "TransactionHistory"));
                     if(history != null && history.startsWith("[") && history.endsWith("]")) {
                         history = history.substring(1, history.length() - 1);
                         String[] historyArray = history.split(", ");
-                        transactionHistory.clear();
                         for(String transaction : historyArray){
-                            transactionHistory.add(transaction.trim());
+                            transactionHistory.add(transaction);
                         }
                     }
                     updateTransactionHistory();
+                    transactionHistoryListView.setVisible(true);
                     return true;
                 }
             }
@@ -636,9 +685,8 @@ public class Controller {
     }
 
     private void depositTransactionHistory(double amount) {
-        String transaction = "+ Deposit: " + amount;
+        String transaction = "+ Deposit = " + amount;
         transactionHistory.add(transaction);
-        updateTransactionHistory();
         updateTransactionHistoryFile();
     }
 
@@ -646,9 +694,8 @@ public class Controller {
 
 
     private void withdrawTransactionHistory(double amount) {
-        String transaction = "- Withdrawn: " + amount;
+        String transaction = "- Withdrawn = " + amount;
         transactionHistory.add(transaction);
-        updateTransactionHistory();
         updateTransactionHistoryFile();
     }
 
@@ -657,9 +704,7 @@ public class Controller {
 
     private void updateTransactionHistory() {
         transactionHistoryListView.getItems().clear();
-        if (!transactionHistory.isEmpty()) {
-            transactionHistoryListView.getItems().addAll(transactionHistory);
-        }
+        transactionHistoryListView.getItems().addAll(transactionHistory);
     }
 
 
