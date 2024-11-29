@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchorWindow" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="420.0" prefWidth="599.0" style="-fx-background-color: Black;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ccFinals.Controller">
+   <children>
+      <Line fx:id="menuBoxLine" endX="310.5" endY="72.0" fill="WHITE" layoutX="52.0" layoutY="156.0" startX="310.5" startY="265.0" stroke="WHITE" strokeWidth="5.0" />
+      <ImageView fx:id="tem" fitHeight="224.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:/C:/Users/gocep/Desktop/SceneBuilder/lib/image/TemShop.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle fx:id="menuBox" arcWidth="100.0" fill="WHITE" height="196.0" layoutX="5.0" layoutY="225.0" smooth="false" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="5.0" style="-fx-fill: Transparent;" width="589.0" />
+      <Pane fx:id="truePane" layoutY="223.0" prefHeight="197.0" prefWidth="599.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="223.0">
+         <children>
+            <Pane fx:id="mainPane" layoutX="-4.0" layoutY="-1.0" prefHeight="197.0" prefWidth="599.0">
+               <children>
+                  <Text fill="WHITE" layoutX="379.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="36.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="379.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="36.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="mainRegisterButton" layoutX="405.0" layoutY="96.0" mnemonicParsing="false" onAction="#mainRegisterButtonClick" style="-fx-background-color: transparent;" text="Register" textFill="WHITE">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="mainLoginButton" layoutX="405.0" layoutY="43.0" mnemonicParsing="false" onAction="#mainLoginButtonClick" style="-fx-background-color: transparent;" text="Login" textFill="WHITE">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </Button>
+                  <Text fill="WHITE" layoutX="21.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="* hnnn....!!! tem wANT go cooleg ">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="21.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="* teM hungr p gib sum muns">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="21.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="* yer muns ver saf!!! me no stil!1!!">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="21.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="* h0I!!! im temM1E!!! ">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="62.0" fitWidth="60.0" layoutX="525.0" layoutY="124.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:/C:/Users/gocep/Desktop/SceneBuilder/lib/image/temmie.gif" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="loginPane" layoutX="-4.0" layoutY="-1.0" prefHeight="197.0" prefWidth="599.0" visible="false">
+               <children>
+                  <Text fill="WHITE" layoutX="379.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="36.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="379.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="36.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="379.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="36.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="loginUserIDInput" layoutX="407.0" layoutY="31.0" prefHeight="20.0" prefWidth="148.0" promptText="User ID" style="-fx-background-color: transparent;">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="loginPinInput" layoutX="407.0" layoutY="71.0" prefHeight="42.0" prefWidth="148.0" promptText="PIN" style="-fx-background-color: transparent;">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="loginLoginButton" layoutX="407.0" layoutY="113.0" mnemonicParsing="false" onAction="#loginLoginButtonClick" prefHeight="42.0" prefWidth="78.0" style="-fx-background-color: transparent;" text="Login" textFill="WHITE">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="62.0" fitWidth="60.0" layoutX="525.0" layoutY="124.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:/C:/Users/gocep/Desktop/SceneBuilder/lib/image/temmie.gif" />
+                     </image>
+                  </ImageView>
+                  <Text fill="WHITE" layoutX="21.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="* H0I!!!! p no tAKE mi muns">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="22.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="* aM teMMie!!! wai you familia">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="21.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="* &gt;v&lt;">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="22.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="* giMM m0r muns for c0oleg grnd">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Pane fx:id="registerPane" layoutX="364.0" layoutY="-1.0" prefHeight="197.0" prefWidth="231.0" visible="false">
+               <children>
+                  <Text fill="WHITE" layoutX="14.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="36.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="14.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="36.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="14.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="36.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="14.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="36.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="registerUserIDInput" layoutX="42.0" layoutY="24.0" prefHeight="28.0" prefWidth="148.0" promptText="User ID" style="-fx-background-color: transparent;">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="registerPinInput" layoutX="42.0" layoutY="96.0" prefHeight="42.0" prefWidth="148.0" promptText="PIN" style="-fx-background-color: transparent;">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="registerNameInput" layoutX="42.0" layoutY="59.0" prefHeight="42.0" prefWidth="148.0" promptText="Name" style="-fx-background-color: transparent;">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="registerRegisterButton" layoutX="42.0" layoutY="134.0" mnemonicParsing="false" onAction="#registerRegisterButtonClick" prefHeight="42.0" prefWidth="108.0" style="-fx-background-color: transparent;" text="Register" textFill="WHITE">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="62.0" fitWidth="60.0" layoutX="160.0" layoutY="127.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:/C:/Users/gocep/Desktop/SceneBuilder/lib/image/temmie.gif" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane fx:id="enteredPane" layoutX="-1.0" layoutY="222.0" prefHeight="198.0" prefWidth="599.0">
+         <children>
+            <Pane fx:id="transactionPane" prefHeight="197.0" prefWidth="599.0" visible="false">
+               <children>
+                  <Text fill="WHITE" layoutX="379.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="36.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="379.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="36.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="379.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="36.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="379.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="36.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="62.0" fitWidth="60.0" layoutX="525.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:/C:/Users/gocep/Desktop/SceneBuilder/lib/image/temmie.gif" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="depositButtonTransactionPane" layoutX="404.0" layoutY="56.0" mnemonicParsing="false" onAction="#depositButtonTransactionPaneClick" style="-fx-background-color: transparent;" text="Deposit" textFill="WHITE">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="withdrawButtonTransactionPane" layoutX="402.0" layoutY="14.0" mnemonicParsing="false" onAction="#withdrawButtonTransactionPaneClick" style="-fx-background-color: transparent;" text="Withdraw" textFill="WHITE">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="settingsButtonTransactionPane" layoutX="407.0" layoutY="98.0" mnemonicParsing="false" onAction="#settingsButtonTransactionPaneClick" style="-fx-background-color: transparent;" text="Settings" textFill="WHITE">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="logOutButtonTransactionPane" layoutX="408.0" layoutY="140.0" mnemonicParsing="false" onAction="#logOutButtonTransactionPaneClick" style="-fx-background-color: transparent;" text="Log Out" textFill="WHITE">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </Button>
+                  <ScrollPane fitToWidth="true" hbarPolicy="NEVER" layoutX="7.0" layoutY="7.0" prefHeight="197.0" prefWidth="355.0" style="-fx-background: tranresparent;">
+                     <content>
+                        <ListView fx:id="transactionHistoryListView" focusTraversable="false" prefHeight="189.0" prefWidth="353.0" style="-fx-background-color: transparent;" />
+                     </content></ScrollPane>
+               </children>
+            </Pane>
+            <Pane fx:id="optionsPane" prefHeight="197.0" prefWidth="599.0" visible="false">
+               <children>
+                  <Text fill="WHITE" layoutX="380.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="36.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="380.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="36.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="380.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="36.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="62.0" fitWidth="60.0" layoutX="525.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:/C:/Users/gocep/Desktop/SceneBuilder/lib/image/temmie.gif" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="nameChangeButton" layoutX="398.0" layoutY="28.0" mnemonicParsing="false" onAction="#nameChangeButtonClick" prefHeight="42.0" prefWidth="158.0" style="-fx-background-color: transparent;" text="Change Name" textFill="WHITE">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="pinChangeButton" layoutX="400.0" layoutY="78.0" mnemonicParsing="false" onAction="#pinChangeButtonClick" prefHeight="42.0" prefWidth="131.0" style="-fx-background-color: transparent;" text="Change Pin" textFill="WHITE">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="returnButtonOptions" layoutX="400.0" layoutY="129.0" mnemonicParsing="false" onAction="#returnButtonOptionsClick" prefHeight="42.0" prefWidth="98.0" style="-fx-background-color: transparent;" text="Return" textFill="WHITE">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </Button>
+                  <Text fill="WHITE" layoutX="18.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="* Yer secrET saf with me">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="18.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="* teM know ye reALLY ar &gt;_&gt;">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="18.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="* h0I!!! ye a teM!?">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="18.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="* hel :)">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Pane fx:id="withdrawPane" prefHeight="197.0" prefWidth="599.0" visible="false">
+               <children>
+                  <Text fill="WHITE" layoutX="379.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="36.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="379.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="36.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="379.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="36.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="amountInputWithdraw" layoutX="407.0" layoutY="9.0" prefHeight="20.0" prefWidth="148.0" promptText="Amount" style="-fx-background-color: transparent;">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="WithdrawButtonWithdrawPane" layoutX="404.0" layoutY="99.0" mnemonicParsing="false" onAction="#WithdrawButtonWithdrawPaneClick" prefHeight="42.0" prefWidth="123.0" style="-fx-background-color: transparent;" text="Withdraw" textFill="WHITE">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="62.0" fitWidth="60.0" layoutX="525.0" layoutY="124.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:/C:/Users/gocep/Desktop/SceneBuilder/lib/image/temmie.gif" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="pinInputWithdraw" layoutX="407.0" layoutY="53.0" prefHeight="20.0" prefWidth="148.0" promptText="PIN" style="-fx-background-color: transparent;">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </TextField>
+                  <Text fill="WHITE" layoutX="18.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="* NUUUUUUUU ME MUNS">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="18.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="* TEM NU MOR COOLEG">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="18.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="* nU funds world dom :&lt;">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="18.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="* gib me muns p">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="returnButtonWithdraw" layoutX="405.0" layoutY="141.0" mnemonicParsing="false" onAction="#returnButtonWithdrawClick" prefHeight="42.0" prefWidth="98.0" style="-fx-background-color: transparent;" text="Return" textFill="WHITE">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </Button>
+                  <Text fill="WHITE" layoutX="379.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="36.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Pane fx:id="depositPane" prefHeight="197.0" prefWidth="599.0" visible="false">
+               <children>
+                  <Text fill="WHITE" layoutX="379.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="36.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="379.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="36.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="amountInputDeposit" layoutX="407.0" layoutY="9.0" prefHeight="20.0" prefWidth="148.0" promptText="Amount" style="-fx-background-color: transparent;">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="depositButtonDepositPane" layoutX="392.0" layoutY="99.0" mnemonicParsing="false" onAction="#depositButtonDepositPaneClick" prefHeight="42.0" prefWidth="123.0" style="-fx-background-color: transparent;" text="Deposit" textFill="WHITE">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="62.0" fitWidth="60.0" layoutX="525.0" layoutY="124.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:/C:/Users/gocep/Desktop/SceneBuilder/lib/image/temmie.gif" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="pinInputDeposit" layoutX="407.0" layoutY="54.0" prefHeight="20.0" prefWidth="148.0" promptText="PIN" style="-fx-background-color: transparent;">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </TextField>
+                  <Text fill="WHITE" layoutX="379.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="36.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="379.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="36.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="returnButtonDeposit" layoutX="405.0" layoutY="141.0" mnemonicParsing="false" onAction="#returnButtonDepositClick" prefHeight="42.0" prefWidth="98.0" style="-fx-background-color: transparent;" text="Return" textFill="WHITE">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </Button>
+                  <Text fill="WHITE" layoutX="18.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="* YES MUR MUNS!!!  ">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="18.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="* giB mur for cool leg">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="18.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="* fund teMM1E worl dom!! ">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="18.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="* bow dow peasan!!!">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Pane fx:id="changePinPane" prefHeight="197.0" prefWidth="599.0">
+               <children>
+                  <Text fill="WHITE" layoutX="380.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="36.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="380.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="36.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="380.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="36.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="62.0" fitWidth="60.0" layoutX="525.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:/C:/Users/gocep/Desktop/SceneBuilder/lib/image/temmie.gif" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="returnButtonChangePin" layoutX="396.0" layoutY="148.0" mnemonicParsing="false" onAction="#returnButtonChangePinClick" prefHeight="42.0" prefWidth="98.0" style="-fx-background-color: transparent;" text="Return" textFill="WHITE">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </Button>
+                  <Text fill="WHITE" layoutX="18.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="* Yer secrET saf with me">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="18.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="* teM know ye reALLY ar &gt;_&gt;">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="18.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="* h0I!!! ye a teM!?">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="18.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="* hel :)">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="380.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="36.0" />
+                     </font>
+                  </Text>
+                  <PasswordField fx:id="confirmPinInput" layoutX="400.0" layoutY="80.0" promptText="Confirm PIN" style="-fx-background-color: transparent;">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </PasswordField>
+                  <PasswordField fx:id="newPinInput" layoutX="400.0" layoutY="47.0" promptText="New PIN" style="-fx-background-color: transparent;">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </PasswordField>
+                  <PasswordField fx:id="oldPinInput" layoutX="400.0" layoutY="13.0" promptText="Old PIN" style="-fx-background-color: transparent;">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </PasswordField>
+                  <Button fx:id="confirmButtonChangePin" layoutX="396.0" layoutY="115.0" mnemonicParsing="false" onAction="#confirmButtonChangePinClick" prefHeight="42.0" prefWidth="106.0" style="-fx-background-color: transparent;" text="Confirm" textFill="WHITE">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </Button>
+                  <Text fill="WHITE" layoutX="380.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="36.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+         </children></Pane>
+      <Pane fx:id="balanceBox" layoutX="351.0" layoutY="157.0" prefHeight="66.0" prefWidth="247.0">
+         <children>
+            <Rectangle arcWidth="100.0" fill="WHITE" height="60.0" layoutX="13.0" layoutY="3.0" smooth="false" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="5.0" style="-fx-fill: Black;" width="230.0" />
+            <Text fx:id="balanceDisplay" fill="WHITE" layoutX="30.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Balance:" wrappingWidth="196.251953125">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="20.0" />
+               </font>
+            </Text>
+         </children></Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,26 @@
+{
+    "java.project.sourcePaths": ["src"],
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\javafx-sdk-23.0.1\\lib\\javafx.base.jar",
+        "c:\\javafx-sdk-23.0.1\\lib\\javafx.controls.jar",
+        "c:\\javafx-sdk-23.0.1\\lib\\javafx.fxml.jar",
+        "c:\\javafx-sdk-23.0.1\\lib\\javafx.graphics.jar",
+        "c:\\javafx-sdk-23.0.1\\lib\\javafx.media.jar",
+        "c:\\javafx-sdk-23.0.1\\lib\\javafx.swing.jar",
+        "c:\\javafx-sdk-23.0.1\\lib\\javafx.web.jar"
+    ],
+    "java.completion.favoriteStaticMembers": [
+
+        "org.junit.Assert.*",
+        "org.junit.Assume.*",
+        "org.junit.jupiter.api.Assertions.*",
+        "org.junit.jupiter.api.Assumptions.*",
+        "org.junit.jupiter.api.DynamicContainer.*",
+        "org.junit.jupiter.api.DynamicTest.*",
+        "org.mockito.Mockito.*",
+        "org.mockito.ArgumentMatchers.*",
+        "org.mockito.Answers.*"
+    ]
+}
